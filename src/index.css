@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blue-light: #0096D6;
+  --color-blue-dark: #004B8D;
+  --color-pearl: #F8FAFC;
+  --color-charcoal: #1E293B;
+
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Montserrat", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-body bg-pearl text-charcoal;
+  }
+
+  h1 { @apply text-7xl md:text-9xl; }
+  h2 { @apply text-5xl md:text-7xl; }
+  h3 { @apply text-3xl md:text-5xl; }
+  h4 { @apply text-2xl md:text-3xl; }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold leading-tight;
+  }
+
+  ::selection {
+    background-color: var(--color-blue-light);
+    color: white;
+  }
+}
+
+@layer components {
+  .heading-font {
+    font-family: var(--font-heading);
+  }
+
+  .blue-gradient {
+    background: linear-gradient(135deg, var(--color-blue-dark) 0%, var(--color-blue-light) 100%);
+  }
+
+  .text-shadow-premium {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(58, 190, 249, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(5, 58, 109, 0.2);
+  }
+
+  .calligraphy-font {
+    font-family: 'Great Vibes', cursive;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+  }
+
+  .logo-blend {
+    mix-blend-mode: multiply;
+  }
+}
+
+/* Custom animations */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite linear;
+}
