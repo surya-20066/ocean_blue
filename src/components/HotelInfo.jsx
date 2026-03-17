@@ -19,7 +19,7 @@ const HotelInfo = () => {
           {/* Left: Content */}
           <div className="space-y-12">
             <div className="space-y-4">
-              <motion.h3 
+              <motion.h3
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 className="text-blue-light font-bold tracking-[0.2em] text-4xl md:text-5xl calligraphy-font"
@@ -81,14 +81,14 @@ const HotelInfo = () => {
           {/* Right: Amenities Grid */}
           <div className="grid grid-cols-2 gap-6">
             {amenities.map((item, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white p-8 rounded-2xl shadow-xl shadow-blue-dark/5 border border-blue-light/5 group hover:border-blue-light/30 transition-all duration-500"
+                className="bg-sky-50 p-8 rounded-2xl shadow-xl shadow-blue-dark/5 border border-blue-light/5 group hover:border-blue-light/30 transition-all duration-500"
               >
-                <div className="size-12 bg-blue-dark text-blue-light rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="size-12 bg-white text-blue-dark rounded-xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform border border-blue-light/10">
                   <item.icon size={24} />
                 </div>
                 <h5 className="text-blue-dark font-bold heading-font text-lg mb-3">{item.title}</h5>

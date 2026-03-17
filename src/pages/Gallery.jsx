@@ -41,7 +41,6 @@ const Gallery = () => {
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16 space-y-4">
-            <h3 className="text-blue-light font-bold tracking-[0.5em] uppercase text-[10px]">Aesthetic Journey</h3>
             <h2 className="text-5xl md:text-6xl heading-font text-blue-dark">The Visual Archive</h2>
             <div className="w-24 h-1 blue-gradient mx-auto"></div>
           </div>

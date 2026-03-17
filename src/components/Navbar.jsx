@@ -10,6 +10,8 @@ const Navbar = () => {
   const { pathname } = useLocation();
 
   const isHomePage = pathname === "/";
+  // Subtly increased logo size (approx 4%)
+  const logoHeight = "h-11 md:h-[50px]"; 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +22,8 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/#about" },
     { name: "Suites", href: "/#suites" },
     { name: "Gallery", href: "/gallery" },
     { name: "Testimonials", href: "/#testimonials" },
@@ -37,11 +41,10 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-700 ${isScrolled ? "py-2" : "py-4 m-1 md:m-0"}`}>
-      <div className={`mx-4 md:mx-12 rounded-3xl transition-all duration-700 border border-charcoal/5 ${isScrolled ? "bg-white shadow-2xl" : "bg-white shadow-lg"}`}>
-        <div className="container mx-auto flex items-center justify-between px-8 md:px-12">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-4 group">
-            <div className="h-16 md:h-20 w-auto">
+      <div className={`mx-2 md:mx-4 lg:mx-12 rounded-2xl md:rounded-3xl transition-all duration-700 border border-charcoal/5 bg-white shadow-xl ${isScrolled ? "py-1" : "py-2"}`}>
+        <div className="container mx-auto flex items-center justify-between px-4 md:px-12">
+          <Link to="/" className="flex items-center gap-4 group shrink-0">
+            <div className={`${logoHeight} w-auto flex items-center`}>
               <img
                 src="/logo.png"
                 alt="Ocean Blue Hotel Logo"
@@ -51,13 +54,13 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-12 lg:gap-16">
+          <nav className="hidden xl:flex items-center gap-4 lg:gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 className={cn(
-                  "text-[15px] font-bold tracking-[0.1em] uppercase transition-all duration-300 hover:text-blue-light relative group",
+                  "text-[20px] font-bold tracking-[0.03em] uppercase transition-all duration-300 hover:text-blue-light relative group",
                   textColor
                 )}
               >
@@ -69,7 +72,7 @@ const Navbar = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="blue-gradient text-white px-8 py-2.5 rounded text-sm font-bold uppercase tracking-[0.1em] shadow-lg hover:shadow-blue-light/20 transition-all font-body"
+                className="blue-gradient text-white px-7 py-2.5 rounded text-[18px] font-bold uppercase tracking-[0.05em] shadow-lg hover:shadow-blue-light/20 transition-all font-body whitespace-nowrap"
               >
                 Reserve
               </motion.button>
@@ -78,7 +81,7 @@ const Navbar = () => {
 
           {/* Mobile Toggle */}
           <button
-            className="md:hidden text-blue-light p-2"
+            className="xl:hidden text-blue-light p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
@@ -92,7 +95,7 @@ const Navbar = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="fixed inset-0 top-[60px] bg-blue-dark/95 backdrop-blur-xl z-40 p-8 md:hidden flex flex-col items-center justify-center"
+              className="fixed inset-0 top-[80px] bg-white z-40 p-8 xl:hidden flex flex-col items-center justify-center"
             >
               <nav className="flex flex-col gap-8 text-center">
                 {navLinks.map((link) => (
@@ -100,13 +103,13 @@ const Navbar = () => {
                     key={link.name}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="text-pearl text-[15px] font-bold tracking-[0.2em] heading-font uppercase hover:text-blue-light transition-colors"
+                    className="text-blue-dark text-[24px] font-bold tracking-[0.1em] heading-font uppercase hover:text-blue-light transition-colors"
                   >
                     {link.name}
                   </a>
                 ))}
                 <Link to="/book-now" onClick={() => setMobileMenuOpen(false)}>
-                  <button className="w-full blue-gradient text-white py-4 px-12 rounded font-bold uppercase tracking-[0.2em] text-sm font-body">
+                  <button className="w-full blue-gradient text-white py-4 px-12 rounded font-bold uppercase tracking-[0.2em] text-lg font-body">
                     Book Now
                   </button>
                 </Link>
