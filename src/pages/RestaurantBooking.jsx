@@ -130,7 +130,7 @@ const RestaurantBooking = () => {
 
             <div className="md:col-span-2 pt-4">
               <button type="submit" className="w-full blue-gradient text-white py-5 rounded-xl text-xs font-bold uppercase tracking-[0.4em] shadow-2xl hover:brightness-110 hover:shadow-blue-light/30 transition-all duration-500">
-                Reserve Table / Submit Booking
+                Reserve Table
               </button>
             </div>
           </form>

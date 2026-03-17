@@ -93,7 +93,7 @@ const Location = () => {
                 href={directionsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-4 bg-blue-dark text-white px-8 py-4 rounded font-bold uppercase tracking-[0.2em] text-[10px] hover:blue-gradient transition-all shadow-xl shadow-blue-dark/20 font-body"
+                className="inline-flex items-center gap-4 blue-gradient text-white px-8 py-4 rounded font-bold uppercase tracking-[0.2em] text-[10px] hover:brightness-110 transition-all shadow-xl shadow-blue-dark/20 font-body"
               >
                 Get Directions 
                 <ArrowRight className="text-blue-light" size={18} />
