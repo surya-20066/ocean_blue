@@ -7,7 +7,7 @@ const suites = [
   {
     id: "oceanic",
     name: "Oceanic Suite",
-    price: "$500",
+    price: "₹500",
     image: "/assets/suite_teal.jpg",
     amenities: [
       { icon: Waves, text: "Unobstructed Ocean View" },
@@ -18,7 +18,7 @@ const suites = [
   {
     id: "horizon",
     name: "Horizon Villa",
-    price: "$850",
+    price: "₹850",
     image: "/assets/suite_warm.png",
     amenities: [
       { icon: Droplets, text: "Infinity Plunge Pool" },
@@ -30,7 +30,7 @@ const suites = [
   {
     id: "penthouse",
     name: "Presidential Penthouse",
-    price: "$1500",
+    price: "₹1500",
     image: "/assets/suite_twin_view.png",
     amenities: [
       { icon: Maximize, text: "Private Rooftop Terrace" },
@@ -49,9 +49,9 @@ const Suites = () => {
   return (
     <section className="py-32 relative overflow-hidden bg-white" id="suites">
       {/* Background layer */}
-      <div 
+      <div
         className="absolute inset-0 z-0 opacity-100 pointer-events-none"
-        style={{ 
+        style={{
           backgroundImage: "url('/assets/suites_bg_new.jpg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -60,7 +60,7 @@ const Suites = () => {
       ></div>
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-20 space-y-4">
-          <motion.h3 
+          <motion.h3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -68,7 +68,7 @@ const Suites = () => {
           >
             Accommodation
           </motion.h3>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -77,7 +77,7 @@ const Suites = () => {
           >
             The Royal Collection
           </motion.h2>
-          <motion.div 
+          <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: "100px" }}
             viewport={{ once: true }}
@@ -102,16 +102,16 @@ const Suites = () => {
             >
               {/* Image as Background */}
               <div className="absolute inset-0 z-0">
-                <img 
-                  alt={suite.name} 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                <img
+                  alt={suite.name}
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                   src={suite.image}
                 />
                 <div className="absolute inset-0 bg-blue-dark/5 group-hover:bg-transparent transition-colors duration-500"></div>
               </div>
 
               {/* Top Details */}
-              <div className="absolute top-6 right-6 z-20 bg-blue-dark/60 backdrop-blur-2xl px-4 py-2 rounded-full text-blue-light font-bold text-[10px] tracking-widest border border-blue-light/20 shadow-xl">
+              <div className="absolute top-6 right-6 z-20 bg-white px-4 py-2 rounded-full text-blue-light font-bold text-[10px] tracking-widest border border-blue-light/20 shadow-xl">
                 {suite.price}/NIGHT
               </div>
               {suite.featured && (
@@ -119,7 +119,7 @@ const Suites = () => {
                   Most Coveted
                 </div>
               )}
-              
+
               {/* Bottom Content Overlay */}
               <div className="absolute bottom-6 left-6 right-6 z-20 p-6 rounded-2xl bg-white/5 backdrop-blur-[40px] border border-white/20 flex flex-col space-y-4">
                 <h4 className="text-xl heading-font font-bold text-white drop-shadow-lg group-hover:text-blue-light transition-colors duration-300">{suite.name}</h4>
@@ -131,13 +131,12 @@ const Suites = () => {
                     </li>
                   ))}
                 </ul>
-                <button 
+                <button
                   onClick={() => handleReserve(suite.id)}
-                  className={`w-full py-3.5 text-[9px] font-bold uppercase tracking-[0.3em] rounded transition-all duration-500 ${
-                  suite.featured 
-                    ? "blue-gradient text-white shadow-lg hover:brightness-110" 
-                    : "bg-white/5 border border-white/20 text-white hover:bg-blue-light hover:text-blue-dark hover:border-blue-light backdrop-blur-md"
-                }`}>
+                  className={`w-full py-3.5 text-[9px] font-bold uppercase tracking-[0.3em] rounded transition-all duration-500 ${suite.featured
+                      ? "blue-gradient text-white shadow-lg hover:brightness-110"
+                      : "bg-white/5 border border-white/20 text-white hover:bg-blue-light hover:text-blue-dark hover:border-blue-light backdrop-blur-md"
+                    }`}>
                   Reserve Suite
                 </button>
               </div>

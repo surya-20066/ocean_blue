@@ -123,7 +123,7 @@ const Booking = () => {
                   </div>
                   <div className="flex-grow">
                     <h4 className="text-lg heading-font font-bold">{suite.name}</h4>
-                    <p className="text-blue-light font-bold text-sm">${suite.price} / NIGHT</p>
+                    <p className="text-blue-light font-bold text-sm">₹{suite.price} / NIGHT</p>
                   </div>
                   {bookingData.suiteId === suite.id && <CheckCircle2 className="text-blue-light" />}
                 </div>
@@ -343,19 +343,19 @@ const Booking = () => {
                   <div className="pt-8 space-y-4">
                     <div className="flex justify-between text-sm text-charcoal/60 font-light font-body">
                       <span>Rate ({bookingData.rooms} {bookingData.rooms > 1 ? 'rooms' : 'room'})</span>
-                      <span>${roomTotal}</span>
+                      <span>₹{roomTotal}</span>
                     </div>
                     <div className="flex justify-between text-sm text-charcoal/60 font-light font-body">
                       <span>Service Charge</span>
-                      <span>${serviceCharge}</span>
+                      <span>₹{serviceCharge}</span>
                     </div>
                     <div className="flex justify-between text-sm text-charcoal/60 font-light font-body">
                       <span>Taxes (12%)</span>
-                      <span>${taxes}</span>
+                      <span>₹{taxes}</span>
                     </div>
                     <div className="flex justify-between items-center pt-4 border-t border-blue-dark/5">
                       <p className="text-xs uppercase tracking-[0.3em] font-bold text-blue-dark">Estimated Total</p>
-                      <p className="text-3xl heading-font font-black text-blue-light">${totalPrice}</p>
+                      <p className="text-3xl heading-font font-black text-blue-light">₹{totalPrice}</p>
                     </div>
                   </div>
 

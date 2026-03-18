@@ -110,7 +110,7 @@ const Navbar = () => {
                 ))}
                 <Link to="/book-now" onClick={() => setMobileMenuOpen(false)}>
                   <button className="w-full blue-gradient text-white py-4 px-12 rounded font-bold uppercase tracking-[0.2em] text-lg font-body">
-                    Book Now
+                    Reserve
                   </button>
                 </Link>
               </nav>
