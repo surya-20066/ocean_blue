@@ -54,10 +54,10 @@ const StickyReserve = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-white text-blue-dark flex items-center justify-center gap-2 px-5 py-3 md:px-6 md:py-3.5 rounded-full text-[13px] md:text-[15px] font-bold uppercase tracking-[0.05em] shadow-xl hover:shadow-blue-light/30 transition-all font-body whitespace-nowrap border border-blue-light/20"
+                    className="bg-white text-blue-dark flex items-center justify-center gap-2 px-5 py-3 md:px-5 md:py-3 rounded-full text-[13px] md:text-[14px] font-bold uppercase tracking-[0.05em] shadow-xl hover:shadow-blue-light/30 transition-all font-body whitespace-nowrap border border-blue-light/20"
                     onClick={() => setIsOpen(false)}
                   >
-                    <Utensils className="w-4 h-4 md:w-5 md:h-5" />
+                    <Utensils className="w-4 h-4 md:w-4 md:h-4" />
                     Book Table
                   </motion.button>
                 </Link>
@@ -65,10 +65,10 @@ const StickyReserve = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-white text-blue-dark flex items-center justify-center gap-2 px-5 py-3 md:px-6 md:py-3.5 rounded-full text-[13px] md:text-[15px] font-bold uppercase tracking-[0.05em] shadow-xl hover:shadow-blue-light/30 transition-all font-body whitespace-nowrap border border-blue-light/20"
+                    className="bg-white text-blue-dark flex items-center justify-center gap-2 px-5 py-3 md:px-5 md:py-3 rounded-full text-[13px] md:text-[14px] font-bold uppercase tracking-[0.05em] shadow-xl hover:shadow-blue-light/30 transition-all font-body whitespace-nowrap border border-blue-light/20"
                     onClick={() => setIsOpen(false)}
                   >
-                    <BedDouble className="w-4 h-4 md:w-5 md:h-5" />
+                    <BedDouble className="w-4 h-4 md:w-4 md:h-4" />
                     Book Stay
                   </motion.button>
                 </Link>
@@ -89,16 +89,16 @@ const StickyReserve = () => {
               damping: 20
             }}
             onClick={() => setIsOpen(!isOpen)}
-            className="blue-gradient text-white flex items-center gap-2 md:gap-3 px-6 py-3 md:px-8 md:py-4 rounded-full text-[14px] md:text-[18px] font-bold uppercase tracking-[0.05em] shadow-2xl hover:shadow-blue-light/40 transition-all font-body whitespace-nowrap group relative"
+            className="blue-gradient text-white flex items-center gap-2 md:gap-2 px-6 py-3 md:px-6 md:py-3 rounded-full text-[14px] md:text-[15px] font-bold uppercase tracking-[0.05em] shadow-2xl hover:shadow-blue-light/40 transition-all font-body whitespace-nowrap group relative"
           >
             <motion.div
               animate={{ rotate: isOpen ? 180 : 0 }}
               transition={{ duration: 0.3 }}
             >
               {isOpen ? (
-                <X className="w-4 h-4 md:w-5 md:h-5" />
+                <X className="w-4 h-4 md:w-4 md:h-4" />
               ) : (
-                <Calendar className="w-4 h-4 md:w-5 md:h-5 group-hover:rotate-12 transition-transform duration-300" />
+                <Calendar className="w-4 h-4 md:w-4 md:h-4 group-hover:rotate-12 transition-transform duration-300" />
               )}
             </motion.div>
             Reserve
