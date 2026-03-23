@@ -23,7 +23,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About Us", href: "/#about" },
+    { name: "About", href: "/#about" },
     { name: "Suites", href: "/#suites" },
     { name: "Gallery", href: "/gallery" },
     { name: "Testimonials", href: "/#testimonials" },
@@ -54,13 +54,13 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden xl:flex items-center gap-4 lg:gap-6">
+          <nav className="hidden xl:flex items-center gap-4 2xl:gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 className={cn(
-                  "text-[20px] font-bold tracking-[0.03em] uppercase transition-all duration-300 hover:text-blue-light relative group",
+                  "text-[16px] 2xl:text-[20px] font-bold tracking-[0.1em] heading-font uppercase transition-all duration-300 hover:text-blue-light relative group",
                   textColor
                 )}
               >
@@ -68,15 +68,6 @@ const Navbar = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-blue-light transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
-            <Link to="/book-now">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="blue-gradient text-white px-7 py-2.5 rounded text-[18px] font-bold uppercase tracking-[0.05em] shadow-lg hover:shadow-blue-light/20 transition-all font-body whitespace-nowrap"
-              >
-                Reserve
-              </motion.button>
-            </Link>
           </nav>
 
           {/* Mobile Toggle */}
@@ -108,11 +99,6 @@ const Navbar = () => {
                     {link.name}
                   </a>
                 ))}
-                <Link to="/book-now" onClick={() => setMobileMenuOpen(false)}>
-                  <button className="w-full blue-gradient text-white py-4 px-12 rounded font-bold uppercase tracking-[0.2em] text-lg font-body">
-                    Reserve
-                  </button>
-                </Link>
               </nav>
             </motion.div>
           )}

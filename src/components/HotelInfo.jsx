@@ -65,14 +65,14 @@ const HotelInfo = () => {
 
             <div className="pt-6 border-t border-blue-dark/5">
               <h4 className="font-bold text-blue-dark uppercase text-[10px] tracking-[0.3em] mb-6">Contact Concierge</h4>
-              <div className="grid grid-cols-2 gap-8">
-                <div>
+              <div className="grid grid-cols-2 gap-4 md:gap-8">
+                <div className="min-w-0">
                   <p className="text-charcoal/40 uppercase text-[8px] tracking-widest mb-1">Email</p>
-                  <p className="text-blue-dark font-bold text-sm">concierge@oceanbluevizag.com</p>
+                  <p className="text-blue-dark font-bold text-xs md:text-sm break-all">concierge@oceanbluevizag.com</p>
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-charcoal/40 uppercase text-[8px] tracking-widest mb-1">Phone</p>
-                  <p className="text-blue-dark font-bold text-sm">+91 70752 06909</p>
+                  <p className="text-blue-dark font-bold text-xs md:text-sm">+91 70752 06909</p>
                 </div>
               </div>
             </div>

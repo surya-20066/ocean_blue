@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import StickyReserve from "./StickyReserve";
 
 const Layout = ({ children }) => {
   return (
@@ -17,6 +18,7 @@ const Layout = ({ children }) => {
           {children}
         </motion.div>
       </main>
+      <StickyReserve />
       <Footer />
     </div>
   );
